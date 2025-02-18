@@ -20,6 +20,5 @@ calorie-calculator/
 ├── img/
 ├── js/
 ├── index.html
-├── LICENSE
 └── README.md
 ```
