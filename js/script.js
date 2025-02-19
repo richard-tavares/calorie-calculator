@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tbody.appendChild(emptyRow);
 
     // Carregar os dados dos alimentos e iniciar TomSelect
-    fetch("/data/TACO.json")
+    fetch("data/TACO.json")
         .then(response => response.json())
         .then(data => {
             foodData = Object.fromEntries(data.map(item => [item.description, item]));
