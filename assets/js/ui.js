@@ -76,22 +76,21 @@ function createFoodCard(food, quantity) {
     card.className = 'card mb-2 food-card';
     card.dataset.food = food.description;
     card.innerHTML = `
-        <div class="card-body py-2 px-3">
-            <div class="food-row d-flex flex-wrap align-items-center gap-2 gap-md-3">
+        <div class="card-body py-1 px-3">
+            <div class="food-row d-flex flex-wrap">
                 <div class="food-name text-truncate">${formatFoodName(food.description)}</div>
-                <button class="food-remove d-md-none" aria-label="Remover"><i class="bi bi-x-lg"></i></button>
-                <div class="food-values d-flex align-items-center gap-2 gap-md-3">
-                    <div class="nutrient-col text-center d-none d-md-block">
+                <div class="food-values d-flex gap-2 gap-md-3">
+                    <div class="nutrient-col text-center d-none d-lg-block">
                         <div class="nutrient-value"><span class="sodium">${fmt((Number.parseFloat(food.sodium_mg) || 0) * qty / 100)}</span> <span class="nutrient-unit">mg</span></div>
                         <div class="nutrient-label">Sódio</div>
                     </div>
-                    <div class="nutrient-sep d-none d-md-block" aria-hidden="true"></div>
+                    <div class="nutrient-sep d-none d-lg-block" aria-hidden="true"></div>
                     <div class="nutrient-col text-center">
                         <div class="nutrient-value"><span class="lipids">${fmt((Number.parseFloat(food.lipid_g) || 0) * qty / 100)}</span> <span class="nutrient-unit">g</span></div>
                         <div class="nutrient-label">Lipídeos</div>
                     </div>
-                    <div class="nutrient-sep d-none d-md-block" aria-hidden="true"></div>
-                    <div class="nutrient-col text-center d-none d-md-block">
+                    <div class="nutrient-sep d-none d-lg-block" aria-hidden="true"></div>
+                    <div class="nutrient-col text-center d-none d-lg-block">
                         <div class="nutrient-value"><span class="fiber">${fmt((Number.parseFloat(food.fiber_g) || 0) * qty / 100)}</span> <span class="nutrient-unit">g</span></div>
                         <div class="nutrient-label">Fibras</div>
                     </div>
@@ -113,13 +112,16 @@ function createFoodCard(food, quantity) {
                 </div>
             </div>
         </div>
-        <div class="food-footer d-flex align-items-center justify-content-center gap-2 px-3 py-2">
-            <span class="small text-muted text-nowrap">Porção</span>
-            <div class="input-group input-group-sm portion-group">
-                <input type="number" inputmode="numeric" class="form-control portion-input text-end" value="${qty}" min="1" max="9999" step="1">
-                <span class="input-group-text">g</span>
+        <div class="food-footer d-flex justify-content-center px-3 py-2">
+            <button class="food-remove" aria-label="Remover"><i class="bi bi-x-lg"></i></button>
+            <div class="d-flex flex-column align-items-center gap-1">
+                <div class="input-group input-group-sm portion-group">
+                    <button class="btn btn-secondary portion-add" type="button"><i class="bi bi-plus-lg"></i></button>
+                    <input type="text" inputmode="numeric" class="form-control portion-input text-end" value="${qty}">
+                    <span class="input-group-text">g</span>
+                </div>
+                <span class="nutrient-label">Porção</span>
             </div>
-            <button class="food-remove d-none d-md-flex" aria-label="Remover"><i class="bi bi-x-lg"></i></button>
         </div>
     `;
     return card;

@@ -42,8 +42,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         onFoodRemoved(foodName);
     });
 
+    listEl.addEventListener('click', (e) => {
+        if (!e.target.closest('.portion-add')) return;
+        const card = e.target.closest('.food-card');
+        if (!card) return;
+        const input = card.querySelector('.portion-input');
+        const val = Math.min(9999, (Number.parseInt(input.value, 10) || 0) + 50);
+        input.value = val;
+        const foodName = card.dataset.food;
+        updateQuantity(foodName, val);
+        updateCardValues(card, foodData[foodName], val);
+        if (!isEmpty()) updateTotals(totalsEl);
+    });
+
+    listEl.addEventListener('beforeinput', (e) => {
+        if (!e.target.classList.contains('portion-input')) return;
+        if (e.data && !/^\d+$/.test(e.data)) e.preventDefault();
+    });
+
     listEl.addEventListener('input', (e) => {
         if (!e.target.classList.contains('portion-input')) return;
+        e.target.value = e.target.value.replace(/\D/g, '');
         const parsed = Number.parseInt(e.target.value, 10);
         const val = Number.isNaN(parsed) ? 0 : Math.min(9999, Math.max(0, parsed));
         const card = e.target.closest('.food-card');

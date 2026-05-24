@@ -22,12 +22,13 @@
     </head>
 
     <body class="d-flex flex-column min-vh-100">
+        <div class="site-header sticky-top">
         <nav class="navbar navbar-dark">
-            <div class="container">
+            <div class="container-lg">
                 <a class="navbar-brand d-flex align-items-center gap-2 p-0" href="#">
                     <img src="assets/img/logo-white.png" class="logo logo-dark" alt="Logo">
                     <img src="assets/img/logo-black.png" class="logo logo-light" alt="Logo">
-                    <span class="brand-text text-gradient">Calorie Calculator</span>
+                    <span class="brand-text"><span class="text-gradient">Calorie</span> <span class="text-gradient">Calculator</span></span>
                 </a>
                 <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
                     <i class="bi bi-moon-stars-fill"></i>
@@ -39,11 +40,10 @@
             </div>
         </nav>
 
-        <main class="container flex-grow-1 my-3">
-
-            <!-- Busca + Total integrados (sticky) -->
-            <div class="card mb-3 meal-panel sticky-top">
-                <div class="card-body pb-2 d-md-flex align-items-center gap-3">
+        <!-- Busca + Total integrados -->
+        <div class="meal-panel">
+            <div class="container-lg">
+                <div class="pt-2 pb-2 d-md-flex align-items-center gap-3">
                     <label for="food-search" class="form-label fw-semibold mb-1 mb-md-0 text-nowrap">Adicionar alimento</label>
                     <div class="input-group">
                         <span class="input-group-text">
@@ -53,8 +53,8 @@
                     </div>
                 </div>
                 <div id="meal-totals" class="d-none border-top">
-                    <div class="card-body py-2">
-                        <div class="small fw-semibold text-muted mb-2">Total da Refeição</div>
+                    <div class="py-1">
+                        <div class="small fw-semibold mb-2">Total da Refeição</div>
                         <div class="d-flex align-items-center text-center">
                             <div class="flex-fill d-none d-md-block">
                                 <div class="nutrient-value"><span id="total-sodium"></span> <span class="nutrient-unit">mg</span></div>
@@ -82,23 +82,25 @@
                             </div>
                             <div class="nutrient-sep" aria-hidden="true"></div>
                             <div class="flex-fill">
-                                <div class="nutrient-value fw-bold text-gradient"><span id="total-cal"></span> <span class="nutrient-unit">kcal</span></div>
+                                <div class="nutrient-value fw-bold"><span id="total-cal" class="text-gradient"></span> <span class="nutrient-unit text-gradient">kcal</span></div>
                                 <div class="nutrient-label">Calorias</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
 
+        <main class="container-lg flex-grow-1 my-1">
             <!-- Lista de alimentos -->
             <div id="food-list">
                 <p class="text-center text-muted py-3">Nenhum alimento adicionado</p>
             </div>
-
         </main>
 
-        <footer class="footer py-3">
-            <div class="container d-flex align-items-center justify-content-between">
+        <footer class="footer py-1">
+            <div class="container-lg d-flex align-items-center justify-content-between">
                 <span class="small">&copy; 2026 Richard Tavares</span>
                 <div class="d-flex align-items-center gap-3">
                     <a href="https://github.com/RichardTavares" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
