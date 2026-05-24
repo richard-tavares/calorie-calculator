@@ -129,12 +129,12 @@ function createFoodCard(food, quantity) {
 
 export function updateCardValues(card, food, quantity) {
     const qty = Number.parseFloat(quantity) || 0;
-    card.querySelector('.calories').textContent  = fmt((Number.parseFloat(food.energy_kcal)    || 0) * qty / 100);
-    card.querySelector('.carbs').textContent     = fmt((Number.parseFloat(food.carbohydrate_g) || 0) * qty / 100);
-    card.querySelector('.proteins').textContent  = fmt((Number.parseFloat(food.protein_g)      || 0) * qty / 100);
-    card.querySelector('.lipids').textContent    = fmt((Number.parseFloat(food.lipid_g)        || 0) * qty / 100);
-    card.querySelector('.fiber').textContent     = fmt((Number.parseFloat(food.fiber_g)        || 0) * qty / 100);
-    card.querySelector('.sodium').textContent    = fmt((Number.parseFloat(food.sodium_mg)      || 0) * qty / 100);
+    card.querySelector('.calories').textContent = fmt((Number.parseFloat(food.energy_kcal) || 0) * qty / 100);
+    card.querySelector('.carbs').textContent = fmt((Number.parseFloat(food.carbohydrate_g) || 0) * qty / 100);
+    card.querySelector('.proteins').textContent = fmt((Number.parseFloat(food.protein_g) || 0) * qty / 100);
+    card.querySelector('.lipids').textContent = fmt((Number.parseFloat(food.lipid_g) || 0) * qty / 100);
+    card.querySelector('.fiber').textContent = fmt((Number.parseFloat(food.fiber_g) || 0) * qty / 100);
+    card.querySelector('.sodium').textContent = fmt((Number.parseFloat(food.sodium_mg) || 0) * qty / 100);
 }
 
 export function updateTotals(totalsEl) {
@@ -144,11 +144,11 @@ export function updateTotals(totalsEl) {
     }
 
     const { cal, carb, prot, lip, fiber, sodium } = getTotals();
-    document.getElementById('total-cal').textContent    = fmt(cal);
-    document.getElementById('total-carb').textContent   = fmt(carb);
-    document.getElementById('total-prot').textContent   = fmt(prot);
-    document.getElementById('total-lip').textContent    = fmt(lip);
-    document.getElementById('total-fiber').textContent  = fmt(fiber);
+    document.getElementById('total-cal').textContent = fmt(cal);
+    document.getElementById('total-carb').textContent = fmt(carb);
+    document.getElementById('total-prot').textContent = fmt(prot);
+    document.getElementById('total-lip').textContent = fmt(lip);
+    document.getElementById('total-fiber').textContent = fmt(fiber);
     document.getElementById('total-sodium').textContent = fmt(sodium);
     totalsEl.classList.remove('d-none');
 }

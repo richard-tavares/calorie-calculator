@@ -23,71 +23,71 @@
 
     <body class="d-flex flex-column min-vh-100">
         <div class="site-header sticky-top">
-        <nav class="navbar navbar-dark">
-            <div class="container-lg">
-                <a class="navbar-brand d-flex align-items-center gap-2 p-0" href="#">
-<span class="brand-text"><span class="text-gradient">Calorie</span> <span class="text-gradient">Calculator</span></span>
-                </a>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
-                    <i class="bi bi-moon-stars-fill"></i>
-                    <div class="theme-track">
-                        <div class="theme-thumb"></div>
-                    </div>
-                    <i class="bi bi-sun-fill"></i>
-                </button>
-            </div>
-        </nav>
-
-        <!-- Busca + Total integrados -->
-        <div class="meal-panel">
-            <div class="container-lg">
-                <div class="pt-2 pb-2 d-md-flex align-items-center gap-3">
-                    <label for="food-search" class="form-label fw-semibold mb-1 mb-md-0 text-nowrap">Adicionar alimento</label>
-                    <div class="input-group">
-                        <span class="input-group-text">
-                            <i class="bi bi-search"></i>
-                        </span>
-                        <select id="food-search" class="form-select"></select>
-                    </div>
+            <nav class="navbar navbar-dark">
+                <div class="container-lg">
+                    <a class="navbar-brand d-flex align-items-center gap-2 p-0" href="#">
+                        <span class="brand-text"><span class="text-gradient">Calorie</span> <span class="text-gradient">Calculator</span></span>
+                    </a>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                        <i class="bi bi-moon-stars-fill"></i>
+                        <div class="theme-track">
+                            <div class="theme-thumb"></div>
+                        </div>
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
                 </div>
-                <div id="meal-totals" class="d-none border-top">
-                    <div class="py-1">
-                        <div class="small fw-semibold mb-2">Total da Refeição</div>
-                        <div class="d-flex align-items-center text-center">
-                            <div class="flex-fill d-none d-md-block">
-                                <div class="nutrient-value"><span id="total-sodium"></span> <span class="nutrient-unit">mg</span></div>
-                                <div class="nutrient-label">Sódio</div>
-                            </div>
-                            <div class="nutrient-sep d-none d-md-block" aria-hidden="true"></div>
-                            <div class="flex-fill">
-                                <div class="nutrient-value"><span id="total-lip"></span> <span class="nutrient-unit">g</span></div>
-                                <div class="nutrient-label">Lipídeos</div>
-                            </div>
-                            <div class="nutrient-sep d-none d-md-block" aria-hidden="true"></div>
-                            <div class="flex-fill d-none d-md-block">
-                                <div class="nutrient-value"><span id="total-fiber"></span> <span class="nutrient-unit">g</span></div>
-                                <div class="nutrient-label">Fibras</div>
-                            </div>
-                            <div class="nutrient-sep" aria-hidden="true"></div>
-                            <div class="flex-fill">
-                                <div class="nutrient-value"><span id="total-prot"></span> <span class="nutrient-unit">g</span></div>
-                                <div class="nutrient-label">Proteínas</div>
-                            </div>
-                            <div class="nutrient-sep" aria-hidden="true"></div>
-                            <div class="flex-fill">
-                                <div class="nutrient-value"><span id="total-carb"></span> <span class="nutrient-unit">g</span></div>
-                                <div class="nutrient-label">Carboidratos</div>
-                            </div>
-                            <div class="nutrient-sep" aria-hidden="true"></div>
-                            <div class="flex-fill">
-                                <div class="nutrient-value fw-bold"><span id="total-cal" class="text-gradient"></span> <span class="nutrient-unit text-gradient">kcal</span></div>
-                                <div class="nutrient-label">Calorias</div>
+            </nav>
+
+            <!-- Busca + Total integrados -->
+            <div class="meal-panel">
+                <div class="container-lg">
+                    <div class="pt-2 pb-2 d-md-flex align-items-center gap-3">
+                        <label for="food-search" class="form-label fw-semibold mb-1 mb-md-0 text-nowrap">Adicionar alimento</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <select id="food-search" class="form-select"></select>
+                        </div>
+                    </div>
+                    <div id="meal-totals" class="d-none border-top">
+                        <div class="py-1">
+                            <div class="small fw-semibold mb-2">Total da Refeição</div>
+                            <div class="d-flex align-items-center text-center">
+                                <div class="flex-fill d-none d-md-block">
+                                    <div class="nutrient-value"><span id="total-sodium"></span> <span class="nutrient-unit">mg</span></div>
+                                    <div class="nutrient-label">Sódio</div>
+                                </div>
+                                <div class="nutrient-sep d-none d-md-block" aria-hidden="true"></div>
+                                <div class="flex-fill">
+                                    <div class="nutrient-value"><span id="total-lip"></span> <span class="nutrient-unit">g</span></div>
+                                    <div class="nutrient-label">Lipídeos</div>
+                                </div>
+                                <div class="nutrient-sep d-none d-md-block" aria-hidden="true"></div>
+                                <div class="flex-fill d-none d-md-block">
+                                    <div class="nutrient-value"><span id="total-fiber"></span> <span class="nutrient-unit">g</span></div>
+                                    <div class="nutrient-label">Fibras</div>
+                                </div>
+                                <div class="nutrient-sep" aria-hidden="true"></div>
+                                <div class="flex-fill">
+                                    <div class="nutrient-value"><span id="total-prot"></span> <span class="nutrient-unit">g</span></div>
+                                    <div class="nutrient-label">Proteínas</div>
+                                </div>
+                                <div class="nutrient-sep" aria-hidden="true"></div>
+                                <div class="flex-fill">
+                                    <div class="nutrient-value"><span id="total-carb"></span> <span class="nutrient-unit">g</span></div>
+                                    <div class="nutrient-label">Carboidratos</div>
+                                </div>
+                                <div class="nutrient-sep" aria-hidden="true"></div>
+                                <div class="flex-fill">
+                                    <div class="nutrient-value fw-bold"><span id="total-cal" class="text-gradient"></span> <span class="nutrient-unit text-gradient">kcal</span></div>
+                                    <div class="nutrient-label">Calorias</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <main class="container-lg flex-grow-1 my-1">

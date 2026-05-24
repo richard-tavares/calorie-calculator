@@ -1,5 +1,6 @@
 /* ---- Base ---- */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -335,7 +336,7 @@ main.container-lg {
         flex-direction: row;
     }
 
-    .food-card > .card-body {
+    .food-card>.card-body {
         flex: 1 1 auto;
         min-width: 0;
     }
@@ -361,7 +362,7 @@ main.container-lg {
     }
 
     /* Nutrients */
-    .food-values .nutrient-value > span:first-child {
+    .food-values .nutrient-value>span:first-child {
         font-size: 1.25rem;
     }
 

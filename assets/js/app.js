@@ -3,9 +3,9 @@ import { addFood, removeFood, updateQuantity, isEmpty } from './store.js';
 import { initSearch, onFoodAdded, onFoodRemoved, renderMeal, updateCardValues, updateTotals } from './ui.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const searchEl  = document.getElementById('food-search');
-    const listEl    = document.getElementById('food-list');
-    const totalsEl  = document.getElementById('meal-totals');
+    const searchEl = document.getElementById('food-search');
+    const listEl = document.getElementById('food-list');
+    const totalsEl = document.getElementById('meal-totals');
     const toggleBtn = document.getElementById('theme-toggle');
 
     toggleBtn.addEventListener('click', () => {
