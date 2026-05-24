@@ -1,8 +1,7 @@
 # Calculadora de Calorias
 Este projeto é uma aplicação web desenvolvida com o objetivo de fornecer uma maneira prática e intuitiva para calcular a ingestão calórica com base nos alimentos consumidos.
 
-![screencapture-richard-tavares-github-io-calorie-calculator-2025-06-02-02_56_58](https://github.com/user-attachments/assets/8510ee03-75fa-4551-b9f3-4cdd6aef397f)
-
+<img width="1920" height="1080" alt="calorie-calculator" src="https://github.com/user-attachments/assets/4cd7b38d-3d44-4aba-9ab3-96c8a7e9f42c" />
 
 ## 🚀 Tecnologias Utilizadas
 - **[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)**
