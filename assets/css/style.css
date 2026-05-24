@@ -16,23 +16,16 @@ body {
     background-color: #f2f2f7;
 }
 
-::-webkit-scrollbar {
-    width: 0.375rem;
-}
-
-::-webkit-scrollbar-track {
-    background: linear-gradient(45deg, #9200eb, #ff037b, #ff5b0d);
-    border-radius: 0.25rem;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 0.25rem;
-}
-
 * {
     scrollbar-width: thin;
-    scrollbar-color: #ff80bf transparent;
+}
+
+[data-bs-theme="dark"] * {
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+[data-bs-theme="light"] * {
+    scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
 }
 
 /* ---- Utilities ---- */
@@ -65,19 +58,6 @@ body {
     background-color: #e2e2e9;
 }
 
-.logo {
-    width: 2.25rem;
-    height: 2.25rem;
-    object-fit: contain;
-}
-
-[data-bs-theme="dark"] .logo-light {
-    display: none;
-}
-
-[data-bs-theme="light"] .logo-dark {
-    display: none;
-}
 
 .brand-text {
     font-weight: 700;
@@ -152,6 +132,7 @@ body {
 }
 
 /* ---- Search (TomSelect) ---- */
+
 .ts-opt {
     padding: 0.0625rem 0;
 }
