@@ -7,7 +7,6 @@ Este projeto é uma aplicação web desenvolvida com o objetivo de fornecer uma 
 - **[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)**
 - **[CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)**
 - **[Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)**
-- **[Bootstrap](https://getbootstrap.com/docs/)**
 
 ## 📚 Fonte de Dados Nutricionais
 As informações nutricionais apresentadas neste projeto foram extraídas da **TACO - Tabela Brasileira de Composição de Alimentos** que é gerenciada pelo **NEPA - Núcleo de Estudos e Pesquisas em Alimentação**.
@@ -17,10 +16,13 @@ As informações nutricionais apresentadas neste projeto foram extraídas da **T
 ## 📂 Estrutura do Projeto
 ```
 calorie-calculator/
-├── css/
+├── assets/
+│   ├── css/
+│   ├── img/
+│   └── js/
 ├── data/
-├── img/
-├── js/
+├── favicon.ico
+├── manifest.json
 ├── index.html
 └── README.md
 ```
